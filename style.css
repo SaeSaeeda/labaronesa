@@ -422,16 +422,13 @@ nav {
 }
 
 .hero-scroll-hint {
-  position: absolute;
-  bottom: 56px;
-  left: 47%;
-  transform: translateX(-50%);
+  display: block;
+  margin-top: 2.4rem;
   font-family: var(--font-poetic);
   font-style: italic;
   font-size: 0.8rem;
   color: var(--gold-light);
   letter-spacing: 0.08em;
-  max-width: calc(100vw - 48px);
   text-align: center;
   animation: floatDown 2.2s ease-in-out infinite;
 }
@@ -788,6 +785,20 @@ nav {
   .champagne-pair {
     grid-template-columns: 1fr;
   }
+
+  /* Details section on mobile */
+  #details {
+    padding: 60px 5vw;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+
+  .detail-card {
+    padding: 32px 24px;
+  }
 }
 
 .wine-col-heading {
@@ -1122,6 +1133,71 @@ footer {
 
 @media (max-width: 520px) {
   .nav-links {
+    display: flex !important;
+    gap: 1rem;
+  }
+
+  .nav-links li:not(:first-child) {
     display: none;
+  }
+
+  .nav-links li:first-child a {
+    background: rgba(184, 134, 11, 0.2);
+    border: 1px solid rgba(184, 134, 11, 0.5);
+    padding: 8px 16px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+  }
+
+  .nav-links li:first-child a:hover {
+    background: rgba(184, 134, 11, 0.35);
+  }
+
+  .back-btn {
+    font-size: 0.7rem !important;
+  }
+
+  /* Details cards very small screen */
+  .detail-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .detail-card h3 {
+    font-size: 0.75rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .detail-card p {
+    font-size: 0.9rem;
+  }
+
+  /* About section responsive */
+  #about {
+    padding: 50px 5vw;
+  }
+
+  #about h2 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+  }
+
+  #about p {
+    font-size: 1rem;
+    margin-top: 0.9rem;
+  }
+
+  .section-tag {
+    font-size: 0.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .vine-rule {
+    margin: 1rem 0;
+  }
+
+  .vine-rule::before,
+  .vine-rule::after {
+    max-width: 80px;
   }
 }
